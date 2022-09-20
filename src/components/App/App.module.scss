@@ -1,0 +1,47 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #fefefe;
+
+  .header {
+    flex: 0 0 auto;
+    background-color: #141414;
+    color: #fefefe;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .info {
+      margin: 0;
+    }
+  }
+
+  .main {
+    flex: 1 1 auto;
+    padding: 20px 0;
+  }
+
+  .footer {
+    flex: 0 0 auto;
+    background-color: #141414;
+    color: #fefefe;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0;
+
+    .link {
+      color: #fefefe;
+
+      &:hover {
+        color: #c5c5c5;
+      }
+    }
+  }
+}
