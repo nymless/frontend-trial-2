@@ -1,14 +1,12 @@
-import React from "react";
-import { Contacts } from "../../components/Contacts/Contacts";
 import Typography from "@mui/material/Typography";
+import React from "react";
 
-export const ContactsPage = () => {
+export const AccountPage = () => {
   return (
     <div>
       <Typography variant="h5" fontWeight="bold" sx={{ marginBottom: 2 }}>
-        Контакты
+        Личный кабинет
       </Typography>
-      <Contacts />
     </div>
   );
 };

@@ -20,6 +20,26 @@
     .info {
       margin: 0;
     }
+
+    .link {
+      color: #fefefe;
+      text-decoration: none;
+    }
+  }
+
+  .nav {
+    .link {
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: inherit;
+      margin: 10px 30px;
+      display: block;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   .main {

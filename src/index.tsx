@@ -6,6 +6,15 @@ import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import { AppRouter } from "./components/AppRouter/AppRouter";
+import { CookiesProvider } from "react-cookie";
+
+if (process.env.NODE_ENV === "development") {
+  const { worker } = require("./server/browser");
+  worker.start({
+    waitUntilReady: true,
+    onUnhandledRequest: "bypass",
+  });
+}
 
 const container = document.getElementById("root")!;
 const root = createRoot(container);
@@ -13,9 +22,11 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
-        <AppRouter />
-      </BrowserRouter>
+      <CookiesProvider>
+        <BrowserRouter>
+          <AppRouter />
+        </BrowserRouter>
+      </CookiesProvider>
     </Provider>
   </React.StrictMode>
 );
